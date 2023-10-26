@@ -1,0 +1,35 @@
+* {
+    margin:  0;
+    padding: 0;
+}
+h1 {
+    padding: 20px;
+}
+ul {
+    padding-left: 75px; 
+    font-size: 20px;
+
+}
+table, tr,td,th {
+    border: 3px inset gray;
+    padding: 5px;
+    margin: 20px;
+}
+td { 
+    font-size: 22px;}
+
+th {
+    font-size: 30px;
+}
+
+img {
+    width: 60px;
+    height: 40px;    
+}
+
+.table_second {
+    border-collapse: collapse;
+}
+.img_good {
+    border: 1px solid black;
+}
