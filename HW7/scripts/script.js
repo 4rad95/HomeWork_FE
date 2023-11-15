@@ -67,10 +67,11 @@ console. log ("//------------------ Шестая часть ---------------")
 
 
 let arr = ["12","1234","125","1243","5678","893","127"]
+let arr1 =[]
 
 function maxStr (strArr)
 {
-    if (!strArr) return null;
+    if (!strArr[0]) return null;
     let maxS = strArr[0] 
     for (let i = 0; i<strArr.length; i++)
     {
@@ -80,6 +81,7 @@ function maxStr (strArr)
     return maxS
 }
 console.log(maxStr(arr)) 
+console.log(maxStr(arr1))
 
 console. log ("//------------------ Необъязательная часть ---------------")
 console. log ("//------------------ Задача № 9 ---------------")
