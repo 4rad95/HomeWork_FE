@@ -105,7 +105,22 @@ newDiv.append(newImgElem, newAElem)
  }
 
 // 2 - Создать функцию, которая получает ссылку на картинку и ссылку на сайт и возвращает элемент.
+{
+    function NewDiv(urlImg, urlA)
+    {
+    const newDiv = document.createElement("div")
+    newDiv.className = "img_container"
 
+    const newImgElem = document.createElement("img")
+    newImgElem.src =urlImg
+
+    const newAElem   = document.createElement("a") 
+    newAElem.innerHTML = `<br> ${urlA}`
+    newDiv.append(newImgElem, newAElem)
+    return newDiv
+    }
+    document.body.append(NewDiv ('https://1gai.ru/uploads/posts/2020-11/1605019928_12.jpg','<a style="color: green;" href="https://tel-ran.de/" target="_blank">Tel-ran</a>'))
+}
 {
     const RazdElem = document.createElement("p") 
     RazdElem.innerText = "---------------------------------------------- Второстепеные задачи - 3-------------------------------------------"
@@ -160,7 +175,6 @@ const products = [
     const newDivElem = document.createElement("div")
     newDivElem.className = "product_container"
     
-
     for (let i=0;i<products.length;i++)
     {
         const nextDiv = document.createElement("div")
