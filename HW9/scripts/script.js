@@ -78,11 +78,13 @@ const newDiv=document.createElement("div")
 
 // Я добавил: 1. при нажатии я добавил автора произведения и 2. при повторном нажатии возвращаем к исходному состоянию
 {
+    let size = 150
     const newDiv=document.createElement("div")
-        newDiv.style.width ="150px"
-        newDiv.style.height="150px"
+        newDiv.style.width = size +"px"
+        newDiv.style.height= size+"px"
         newDiv.style.backgroundColor="black"
         newDiv.style.margin="40px"
+        console.log(newDiv.style.width )
     const newButton=document.createElement("button")
 
     const newP=document.createElement("p")
@@ -95,13 +97,13 @@ const newDiv=document.createElement("div")
         newButton.addEventListener("click",function() {
             if (flag) {
                 newP.innerText= "Каземир Мальевич 'Черный квадрат' 1915 г."            
-                newDiv.style.width ="170px"
-                newDiv.style.height="170px"   
+                newDiv.style.width =size+20+"px"
+                newDiv.style.height=size+20+"px"
                 flag = false  }
             else {
                 newP.innerText=""
-                newDiv.style.width ="150px"
-                newDiv.style.height="150px"
+                newDiv.style.width =size+"px"
+                newDiv.style.height=size+"px"
                 flag= true
             }   
         })
@@ -157,7 +159,6 @@ const newDiv=document.createElement("div")
 
 
     //Создать кнопку и div с классом root. При клике на кнопку в div создаются по очереди параграфы синего и зеленого цветов. Первый цвет синий.
-    // Я добавил при повторном нажатии возвращаем к исходному состоянию
 {
     const newDiv=document.createElement("div")
     newDiv.className = "root"
@@ -178,17 +179,21 @@ const newDiv=document.createElement("div")
 
     newDiv.appendChild(newPBlue)
     newDiv.appendChild(newPGreen)
+    newPBlue.innerText= "Предшествовавший созданию картины период с 1910 по 1913 год был решающим в развитии русского авангарда. В это время движение кубофутуризма достигло своего апогея и начали появляться новые художественные направления. Кубизм и его метод «геометризации» уже казались художникам односторонними."   
 
-    let flag = true
+    newPGreen.innerText ="Одни художники стремились к более тонкой и сложной согласованности искусства с природой. Другим в кубизме мешала его неизменная привязанность к «предметности» изображения. "    
+
+
+    let flag = false
 
     newButton.addEventListener("click",function() {
         if (flag) {
-            newPBlue.innerText= "Предшествовавший созданию картины период с 1910 по 1913 год был решающим в развитии русского авангарда. В это время движение кубофутуризма достигло своего апогея и начали появляться новые художественные направления. Кубизм и его метод «геометризации» уже казались художникам односторонними."        
-            newPGreen.innerText ="Одни художники стремились к более тонкой и сложной согласованности искусства с природой. Другим в кубизме мешала его неизменная привязанность к «предметности» изображения. "    
+            newPBlue.style.color="blue"     
+            newPGreen.style.color="green"    
             flag = false  }
         else {
-            newPBlue.innerText=""
-            newPGreen.innerText=""
+            newPBlue.style.color="green"     
+            newPGreen.style.color="blue"     
             flag= true
         }   
     })
