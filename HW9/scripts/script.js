@@ -6,7 +6,7 @@
 
  // Создать кнопку и красный квадрат с размерами 200х200px. При клике на кнопку менять у квадрата цвет заднего фона на зеленый и уменьшать его до размеров 100х100px
 
-// Я добавил когда отводим курсор мы возвращаемся к исходным размерам ))
+// Я добавил при повторном нажатии возвращаем к исходному состоянию 
 
 {
 const newDiv=document.createElement("div")
@@ -14,18 +14,25 @@ const newDiv=document.createElement("div")
     newDiv.style.height="200px"
     newDiv.style.backgroundColor="red"
     newDiv.style.margin="40px"
+    const newButton=document.createElement("button")
+    newButton.innerText = "Click Me "
+    newButton.style.marginLeft="40px"
+    let flag = true
 
-    newDiv.addEventListener("click",function() {
-        newDiv.style.width ="100px"
+    newButton.addEventListener("click",function() {
+     
+     if (flag) {   newDiv.style.width ="100px"
         newDiv.style.height="100px"
         newDiv.style.backgroundColor="green"        
-    })
-    newDiv.addEventListener("mouseout",function() {
+        flag = false
+    }
+    else {
         newDiv.style.width ="200px"
         newDiv.style.height="200px"
         newDiv.style.backgroundColor="red"        
-})
-    document.body.append(newDiv)
+        flag = true
+}})
+    document.body.append(newDiv,newButton)
 }
 
 {
