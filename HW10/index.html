@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="inputFormContainer">
+    <form id="inputForm" >
+        <input type="text" class="inputF1" placeholder="Имя">
+        <input type="text" class="inputF2" placeholder="Фамилия">
+        <input type="number" class="inputF3" min="0" placeholder="Возраст">
+        <button>Добавить</button>
+    </form>
+    <form class="sort" >
+        <label for="sorting">Cортировка: </label>
+        <select id="sorting">
+          <option value="lname">Сортировать по фамилии</option>
+          <option value="fname">Сортровать по имени</option>          
+          <option value="age">Сортировать по Возрасту</option>
+        </select>
+
+    </form>
+    </div>
+    <div class="usersCards">
+
+    </div>
+</body>
+<script src="./scripts/script.js"></script>
+</html>
